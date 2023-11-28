@@ -1,33 +1,26 @@
-const fs = require("fs");
+const fs = require('fs');
 
 class ProductManager {
-  constructor() {
-    this.loadProducts();
+    constructor() {
     this.products = [];
-  }
+    } 
 
-  loadProducts() {
-    const jsonString = fs.readFileSync('./products.json');
-    const productos = JSON.parse(jsonString);
-    this.products = productos;
-  }
-
-  getProducts() {
+    getProducts() {
     return this.products;
-  }
+    }
 
-  getProductById(pid) {
-    return this.products.find((producto) => producto.id === pid);
-  }
+    getProductById(pid) {
+    return this.products.find((product) => product.id === pid);
+    }
 
-  addProduct(product) {
+    addProduct(product) {
     this.products.push(product);
-  }
+    }
 
-  saveProducts() {
-    const productsString = JSON.stringify(this.products);
-    fs.writeFileSync("./products.json", productsString);
-  }
+    saveProducts() {
+        const productsString = JSON.stringify(this.products);
+        fs.writeFileSync('./products.json', productsString);
+    }
 }
 
 module.exports = ProductManager;
