@@ -1,12 +1,13 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const PUERTO = 8080;
 
 app.use(express.urlencoded({extended:true}));
 
 const ProductManager = require("../src/ProductManager.js")
-const productManager = new ProductManager("./products.json")
+const productManager = new ProductManager("../src/products.json")
 
+app.use(express.json());
 app.get("/api/products", async (req, res) => {
     try {
         const limit = req.query.limit;
@@ -39,6 +40,33 @@ app.get("/api/products/:pid", async (req, res) => {
         res.status(500).json({error: "Error del servidor"});
     }
 });
+
+app.post("/api/products", async (req, res) => {
+    const nuevoProducto = req.body; 
+    console.log(nuevoProducto);
+
+    try {
+        await productManager.addProduct(nuevoProducto),
+        res.status(201).json({message: "Producto agregado exitosamente"});
+    } catch (error) {
+        console.log("error al agregar un producto ", error);
+        res.status(500).json({error: "error del servidor"});
+    }
+})
+
+app.put("/api/products/:pid", async (req, res) => {
+    let id = req.params.pid; 
+    const productoActualizado = req.body; 
+
+    try {
+        await productManager.updateProduct(parseInt(id), productoActualizado);
+        res.json({message: "Producto actualizado correctamente"});
+    } catch (error) {
+        console.log("No pudimos actualizar", error); 
+        res.status(500).json({error: "Error del server"});
+    }
+} )
+
 
 
 app.listen(PUERTO);
