@@ -1,1 +1,122 @@
-[]
+[
+    {
+        "title": "Plato",
+        "description": "Para servir tus comidas favoritas",
+        "price": "1500",
+        "img": "Sin Imagen",
+        "code": "abc123",
+        "stock": "150",
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 1
+    },
+    {
+        "title": "Taza",
+        "description": "Ideal para disfrutar de tu bebida caliente",
+        "price": "2500",
+        "img": "Sin Imagen",
+        "code": "abc124",
+        "stock": "150",
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 2
+    },
+    {
+        "title": "Cuchillo",
+        "description": "Afilado y resistente",
+        "price": "3500",
+        "img": "Sin Imagen",
+        "code": "abc125",
+        "stock": "150",
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 3
+    },
+    {
+        "title": "Lámpara",
+        "description": "Iluminación suave para tu hogar",
+        "price": "5500",
+        "img": "Sin Imagen",
+        "code": "abc126",
+        "stock": "150",
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 4
+    },
+    {
+        "title": "Candelabro",
+        "description": "Agrega un toque elegante a tus eventos",
+        "price": 12000,
+        "img": "sin imagen",
+        "code": "abc127",
+        "stock": 30,
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 5
+    },
+    {
+        "title": "Espejo",
+        "description": "Perfecto para tu tocador o pared",
+        "price": 2000,
+        "img": "Imagen 6",
+        "code": "abc128",
+        "stock": 50,
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 6
+    },
+    {
+        "title": "Bandeja",
+        "description": "Sirve tus aperitivos con estilo",
+        "price": 3000,
+        "img": "Imagen 7",
+        "code": "abc129",
+        "stock": 75,
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 7
+    },
+    {
+        "title": "Mantel",
+        "description": "Añade elegancia a tu mesa",
+        "price": 4000,
+        "img": "Imagen 8",
+        "code": "abc130",
+        "stock": 100,
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 8
+    },
+    {
+        "title": "Jarrón",
+        "description": "Decora tu hogar con flores frescas",
+        "price": 5000,
+        "img": "Imagen 9",
+        "code": "abc131",
+        "stock": 125,
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 9
+    },
+    {
+        "title": "Caja de Almacenamiento",
+        "description": "Guarda tus objetos pequeños de forma organizada",
+        "price": 6000,
+        "img": "Imagen 10",
+        "code": "abc132",
+        "stock": 150,
+        "category": "Almacen",
+        "status": true,
+        "thumbnails": [],
+        "id": 10
+    }
+]

@@ -4,11 +4,11 @@ const PUERTO = 8080;
 
 app.use(express.urlencoded({extended:true}));
 
-const ProductManager = require("../src/ProductManager.js")
-const productManager = new ProductManager("../src/products.json")
+const ProductManager = require ("./ProductManager.js");
+const productManager = new ProductManager ("./products.json");
 
 app.use(express.json());
-app.get("/api/products", async (req, res) => {
+app.get("/products", async (req, res) => {
     try {
         const limit = req.query.limit;
         const productos = await productManager.getProducts();
@@ -23,7 +23,7 @@ app.get("/api/products", async (req, res) => {
     }
 });
 
-app.get("/api/products/:pid", async (req, res) => {
+app.get("/products/:pid", async (req, res) => {
     let id = req.params.pid;
 
     try {
@@ -41,7 +41,7 @@ app.get("/api/products/:pid", async (req, res) => {
     }
 });
 
-app.post("/api/products", async (req, res) => {
+app.post("/products", async (req, res) => {
     const nuevoProducto = req.body; 
     console.log(nuevoProducto);
 
@@ -54,7 +54,7 @@ app.post("/api/products", async (req, res) => {
     }
 })
 
-app.put("/api/products/:pid", async (req, res) => {
+app.put("/products/:pid", async (req, res) => {
     let id = req.params.pid; 
     const productoActualizado = req.body; 
 
